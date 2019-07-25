@@ -6,7 +6,7 @@ import UniAlarm from '../../src/alarm/alarm'
 class Demo extends Component {
   render() {
     return <div>
-      <UniAlarm dot />
+      <UniAlarm dot={false} type="account" />
     </div>
   }
 }
