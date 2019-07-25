@@ -3,7 +3,17 @@ import * as PropTypes from 'prop-types';
 import { Icon } from 'antd';
 import './alarm.scss';
 
-export default class UniAlarm extends Component {
+export interface AlermProps {
+  dot?: boolean,
+}
+
+export default class UniAlarm extends Component<AlermProps, any> {
+  static defaultProps = {
+    dot: false,
+  }
+  static propTypes = {
+    dot: PropTypes.bool,
+  }
   render() {
     return (
       <div className="bell-wrap">
@@ -16,10 +26,4 @@ export default class UniAlarm extends Component {
       </div>
     )
   }
-}
-UniAlarm.defaultProps = {
-  dot: false,
-}
-UniAlarm.propTypes = {
-  dot: PropTypes.bool,
 }
