@@ -1,6 +1,6 @@
 {
   "name": "@uni/uni-alarm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "uni-alarm React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -15,7 +15,7 @@
     "build:ts": "tsc",
     "build:all": "npm-run-all copy:css-to-lib build:ts",
     "clean": "nwb clean-module && nwb clean-demo",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build:ts&&npm run build&&npm run build",
     "start": "nwb serve-react-demo --port 3333",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
