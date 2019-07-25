@@ -1,0 +1,19 @@
+.bell-wrap{
+    display: inline;
+    position: relative;
+    i{
+        font-size: 22px;
+        color: #999;
+    }
+    .bell-cycle{
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: #ff5d5d;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        position: absolute;
+        top: -2px;
+        right: 0px;
+    }
+}

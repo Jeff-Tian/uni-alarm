@@ -13,7 +13,14 @@ module.exports = {
       config.module.rules.push({
         'test': /\.tsx?$/,
         'loader': 'awesome-typescript-loader',
-      })
+      },{
+        test: /\.scss$/,
+        use: [
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
+          "sass-loader" // compiles Sass to CSS, using Node Sass by default
+        ]
+    })
 
       return config
     },
